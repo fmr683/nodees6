@@ -17,7 +17,7 @@
             "host": "localhost",
             "user": "root",
             "password": "",
-            "connectionLimit": 10,
+            "connectionLimit": 50,
             "name": "add_manager",
             "debug": true
         },
