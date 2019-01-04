@@ -10,6 +10,7 @@ var authentication = require('./middlewares/authentication');
 // Routes
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var imageRouter = require('./routes/image');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use(function(req, res, next) {
 // API Calls
 app.use('/', indexRouter);
 app.use('/v1/users', usersRouter);
+app.use('/v1/image', imageRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -45,7 +47,7 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');*/
-  response = responseMessages.commonResponse(responseMessages.UNKNOWN_ERROR);
+  response = responseMessages.commonResponse(responseMessages.UNKNOWN_ERROR, "", "", err.message);
   res.status(500).json(response);
 });
 

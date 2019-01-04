@@ -10,7 +10,8 @@
             "secret": "CA41A12EA2828DBC49CDBDA88D521",
             "guestActions": [
                 {"url": "/v1/users/", "method": "POST"},
-                {"url": "/v1/users/login", "method": "POST"}
+                {"url": "/v1/users/login", "method": "POST"},
+                {"url": "/v1/image/", "method": "POST"}
             ]
         },
         "database": {
@@ -24,5 +25,10 @@
         "server": {
             "port": 5000
         }
-    }
+    },
+    "tmpPath": "public/tmp",
+    "thumbWidth": 200,
+    "thumbHeight": 250,
+    "thumbnail": "public/images/api/thumbnail/",
+    "fileSize": 5 // mb
 }

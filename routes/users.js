@@ -13,7 +13,7 @@ router.get('/:id', validator.get, userController.get);
 router.post('/', validator.signUp, userController.signUp);
 
 /* POST User login */
-router.post('/login/', validator.login, userController.login);
+router.post('/login', validator.login, userController.login);
 
 
 
